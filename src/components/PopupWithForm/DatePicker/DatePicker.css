@@ -1,0 +1,113 @@
+.calendar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  box-sizing: border-box;
+  background: var(--input-bg);
+  border: var(--form-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.calendar:hover {
+  cursor: pointer;
+}
+
+.calendar__current-date {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.calendar__icon {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../../images/assets/icon-calendar.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.calendar__calendar {
+  width: 100%;
+  max-width: 240px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background: var(--input-bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.calendar__calendar_open {
+  display: flex;
+}
+
+.calendar__months-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__month-change {
+  width: 9px;
+  height: 9px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.calendar__month-change:hover {
+  cursor: pointer;
+}
+.calendar__month-change_type_backward {
+  background-image: url("../../../images/assets/icon-arrow-left.svg");
+}
+.calendar__month-change_type_forward {
+  background-image: url("../../../images/assets/icon-arrow-right.svg");
+}
+
+.calendar__days-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar__day {
+  width: 16px;
+  height: 16px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  text-align: center;
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+  align-self: flex-start;
+}
+.calendar__day:hover {
+  cursor: pointer;
+  color: #9277ff;
+}
+.calendar__day_current {
+  color: #9277ff;
+}

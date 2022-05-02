@@ -1,0 +1,32 @@
+.App {
+  position: relative;
+  display: flex;
+  gap: 36px;
+  font-family: Spartan, Arial, sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--main-bg);
+
+  /* font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* text size adjust to maintain proportionality */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+
+  /* apply kerning/ligatures to improve legibility (slows performance) */
+  text-rendering: optimizeLegibility;
+}
+
+@media screen and (max-width: 1024px) {
+  .App {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+}

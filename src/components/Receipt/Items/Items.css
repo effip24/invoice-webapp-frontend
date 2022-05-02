@@ -1,0 +1,112 @@
+.items {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--items-bg);
+  border-radius: 8px 8px 0px 0px;
+  padding: 32px;
+  box-sizing: border-box;
+  margin-bottom: 64px;
+}
+
+.items__table {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.items__table-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.items__table-wrap:nth-child(1) {
+  align-items: flex-start;
+}
+
+
+.items__table-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  /* identical to box height, or 164% */
+  letter-spacing: -0.229167px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.items__table-name {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.items__total-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
+  background: var(--total-bg);
+  border-radius: 0px 0px 8px 8px;
+}
+
+.item__total-label {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 18px;
+  /* identical to box height, or 164% */
+  letter-spacing: -0.229167px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.item__total {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  text-align: right;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .items {
+    padding: 24px;
+
+    margin-bottom: 78px;
+  }
+
+  .items__table-wrap {
+    gap: 24px;
+  }
+}

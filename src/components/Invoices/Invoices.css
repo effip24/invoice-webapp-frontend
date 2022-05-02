@@ -1,0 +1,287 @@
+.invoices {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 72px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.invoices__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  max-width: 730px;
+  gap: 65px;
+}
+
+.invoices__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.invoices__title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+}
+
+.invoices__title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  /* identical to box height */
+  letter-spacing: -1px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.invoices__subtitle {
+  font-family: "Spartan";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.invoices__filter-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.invoices__filter-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.invoices__filter-wrap:hover {
+  cursor: pointer;
+}
+
+.invoices__filter-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.invoices__filter-icon {
+  width: 8px;
+  height: 4px;
+  background-image: url("../../images/assets/icon-arrow-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.invoices__filter {
+  position: absolute;
+  bottom: -135px;
+  right: 90px;
+  width: 192px;
+  display: none;
+  flex-direction: column;
+  gap: 17px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.invoices__filter_open {
+  display: flex;
+}
+
+.invoices__filter-type-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 13px;
+}
+
+.invoices__filter-check {
+  width: 16px;
+  height: 16px;
+  background-color: #dfe3fa;
+  border-radius: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 7px 7px;
+}
+.invoices__filter-check:hover {
+  cursor: pointer;
+}
+.invoices__filter-check_checked {
+  background-image: url("../../images/assets/icon-check.svg");
+  background-color: #7c5dfa;
+}
+
+.invoices__filter-name {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.invoices__new-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  gap: 16px;
+  background: #7c5dfa;
+  border-radius: 24px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #ffffff;
+  box-sizing: border-box;
+  border: 0;
+}
+.invoices__new-button:hover {
+  background: #9277ff;
+  cursor: pointer;
+}
+
+.invoices__new-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url("../../images/assets/plus.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.invoices__empty-wrap {
+  display: flex;
+  width: 100%;
+  max-width: 241px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.invoices__empty-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.invoices__empty-title-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.invoices__empty-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.625px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.invoices__empty-text {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* or 125% */
+  text-align: center;
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.invoices__list {
+  width: 100%;
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .invoices__container {
+    max-width: 672px;
+    gap: 56px;
+    padding-bottom: 105px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .invoices__container {
+    max-width: 327px;
+    gap: 32px;
+  }
+
+  .invoices__title-wrap {
+    gap: 4px;
+  }
+
+  .invoices__title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .invoices__filter-container {
+    gap: 18px;
+  }
+
+  .invoices__filter-wrap {
+    max-width: 54px;
+    gap: 12px;
+  }
+
+  .invoices__new-button {
+    gap: 8px;
+  }
+}

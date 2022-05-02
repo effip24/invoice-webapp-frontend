@@ -1,0 +1,153 @@
+.status-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
+
+.status-bar__status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.status-bar__label {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.status-bar__status-wrap {
+  width: 104px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  mix-blend-mode: normal;
+  border-radius: 6px;
+}
+
+.status-bar__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-bar__status {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  background-color: transparent;
+  margin: 0;
+}
+
+.status-bar__buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.status-bar__edit {
+  width: 73px;
+  height: 48px;
+  background: #f9fafe;
+  border-radius: 24px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #7e88c3;
+  border: 0;
+}
+.status-bar__edit:hover {
+  background: #dfe3fa;
+  cursor: pointer;
+}
+
+.status-bar__delete {
+  width: 89px;
+  height: 48px;
+  background: #ec5757;
+  border-radius: 24px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #ffffff;
+  border: 0;
+}
+.status-bar__delete:hover {
+  background: #ff9797;
+  cursor: pointer;
+}
+
+.status-bar__mark {
+  width: 131px;
+  height: 48px;
+  background: #7c5dfa;
+  border-radius: 24px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #ffffff;
+  border: 0;
+}
+.status-bar__mark:hover {
+  background: #9277ff;
+  cursor: pointer;
+}
+.status-bar__mark_inactive {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .status-bar {
+    padding: 24px;
+  }
+
+  .status-bar__status-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .status-bar__buttons-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+    padding: 24px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Spartan";
+  src: url("./SpartanMB-Regular.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spartan";
+  src: url("./SpartanMB-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}

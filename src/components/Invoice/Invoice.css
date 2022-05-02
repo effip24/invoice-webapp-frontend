@@ -1,0 +1,155 @@
+.invoice {
+  width: 100%;
+}
+.invoice:hover {
+  border: 1px solid #7c5dfa;
+  cursor: pointer;
+}
+
+.invoice__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  padding: 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.invoice__left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 43px;
+}
+
+.invoice__info {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.invoice__info_bold {
+  color: var(--text-bold);
+  font-weight: 700;
+}
+
+.invoice__right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.invoice__moeny {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  text-align: right;
+  letter-spacing: -0.8px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.invoice__status-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.invoice__status-wrap {
+  width: 104px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  mix-blend-mode: normal;
+  border-radius: 6px;
+}
+.invoice__status-wrap_type_paid {
+  background-color: rgba(51, 214, 159, 0.06);
+}
+.invoice__status-wrap_type_pending {
+  background-color: rgba(255, 143, 0, 0.06);
+}
+.invoice__status-wrap_type_draft {
+  background-color: var(--dot-bg);
+}
+
+.invoice__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.invoice__status-dot_type_paid {
+  background-color: rgba(51, 214, 159, 1);
+}
+.invoice__status-dot_type_pending {
+  background-color: rgba(255, 143, 0, 1);
+}
+.invoice__status-dot_type_draft {
+  background-color: var(--text-bold);
+}
+
+.invoice__status {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  background-color: transparent;
+  margin: 0;
+}
+.invoice__status_type_paid {
+  color: rgba(51, 214, 159, 1);
+}
+.invoice__status_type_pending {
+  color: rgba(255, 143, 0, 1);
+}
+.invoice__status_type_draft {
+  color: var(--text-bold);
+}
+
+.invoice__status-icon {
+  width: 4px;
+  height: 8px;
+  background-image: url("../../images/assets/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.invoice__status-icon:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .invoice__container {
+    padding: 24px;
+  }
+
+  .invoice__left-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .invoice__right-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

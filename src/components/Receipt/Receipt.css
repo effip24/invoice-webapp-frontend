@@ -1,0 +1,64 @@
+.receipt {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 72px;
+  box-sizing: border-box;
+}
+
+.receipt__container {
+  width: 100%;
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 32px;
+}
+
+.receipt__back-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+}
+.receipt__back-container:hover {
+  cursor: pointer;
+}
+
+.receipt__back-icon {
+  width: 9px;
+  height: 5px;
+  background-image: url("../../images/assets/icon-arrow-left.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.receipt__back {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .receipt__container {
+    max-width: 672px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .receipt__container {
+    max-width: 327px;
+    gap: 16px;
+  }
+}

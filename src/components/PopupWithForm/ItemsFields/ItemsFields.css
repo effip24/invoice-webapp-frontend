@@ -1,0 +1,149 @@
+.popup-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+
+.popup-items__table {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popup-items__title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  /* identical to box height, or 178% */
+  letter-spacing: -0.375px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.popup-items__table-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+.popup-items__table-wrap_type_name {
+  max-width: 214px;
+}
+.popup-items__table-wrap_type_quantity {
+  max-width: 72px;
+}
+.popup-items__table-wrap_type_price {
+  max-width: 100px;
+}
+
+.popup-items__table-title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.popup-items__table-input {
+  width: 100%;
+  background: var(--input-bg);
+  border: var(--form-border);
+  border-radius: 4px;
+  padding: 17px;
+  box-sizing: border-box;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  outline: 0;
+}
+
+.popup-items__add {
+  width: 100%;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  text-align: center;
+  letter-spacing: -0.25px;
+  color: #7e88c3;
+  margin: 0;
+  align-self: center;
+  padding: 17px;
+  box-sizing: border-box;
+  border: 0;
+  background-color: transparent;
+}
+.popup-items__add:hover {
+  cursor: pointer;
+  background: #dfe3fa;
+  border-radius: 24px;
+}
+
+.popup-items__total-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.popup-items__delete {
+  display: flex;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../../images/assets/icon-delete.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.popup-items__delete:hover {
+  cursor: pointer;
+  background-image: url("../../../images/assets/icon-delete-hover.png");
+}
+
+.popup-items__mobile-table-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.popup-items__mobile-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup-items__delete {
+    position: absolute;
+    top: 50%;
+    right: -26px;
+  }
+
+  .popup-items__table {
+    flex-direction: column;
+  }
+}

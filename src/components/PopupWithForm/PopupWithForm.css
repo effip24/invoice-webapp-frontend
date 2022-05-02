@@ -1,0 +1,228 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 103px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 48px;
+  width: 100%;
+  height: 100%;
+  max-width: 619px;
+  background: var(--bg);
+  border-radius: 0px 20px 20px 0px;
+  padding: 56px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.popup__form::-webkit-scrollbar {
+  display: none;
+}
+
+.popup__bill-contianer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.popup__inputs-label {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #7c5dfa;
+  margin: 0;
+}
+
+.popup__input-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup__input-label-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__input-label {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+}
+
+.popup__input-error {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  /* identical to box height, or 150% */
+  letter-spacing: -0.208333px;
+  color: #ec5757;
+}
+
+.popup__input {
+  width: 100%;
+  height: 48px;
+  background: var(--input-bg);
+  border: var(--form-border);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: var(--text-bold);
+  padding: 17px;
+  box-sizing: border-box;
+  outline: 0;
+}
+.popup__input_type_error {
+  border: 1px solid #ec5757;
+}
+
+.popup__address-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.popup__payment-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+}
+
+.popup__buttons-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup__save-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+}
+
+.popup__button {
+  border-radius: 24px;
+  padding: 17px 24px;
+  border: 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+.popup__button_disabled {
+  pointer-events: none;
+  opacity: 0.2;
+}
+.popup__button:hover {
+  cursor: pointer;
+}
+.popup__button_type_white {
+  background: #f9fafe;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #7e88c3;
+}
+.popup__button_type_black {
+  background: #373b53;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #888eb0;
+}
+.popup__button_type_black:hover {
+  background: #0c0e16;
+}
+.popup__button_type_purple {
+  background: #7c5dfa;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  color: #ffffff;
+}
+.popup__button_type_purple:hover {
+  background: #9277ff;
+}
+
+@media screen and (max-width: 1024px) {
+  .popup {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup__form {
+    padding: 24px;
+  }
+  .popup__button {
+    height: 48px;
+    padding: 17px;
+  }
+}

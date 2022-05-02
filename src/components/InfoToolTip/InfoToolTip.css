@@ -1,0 +1,112 @@
+.tool-tip {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.tool-tip_open {
+  visibility: visible;
+}
+.tool-tip::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.tool-tip__container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--bg);
+  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  border-radius: 8px;
+  gap: 13px;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+.tool-tip__title {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  /* identical to box height, or 133% */
+  letter-spacing: -0.5px;
+  color: var(--text-bold);
+  margin: 0;
+}
+
+.tool-tip__text {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  /* or 183% */
+  letter-spacing: -0.25px;
+  color: var(--text-regular);
+  margin: 0;
+}
+
+.tool-tip__buttons-container {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-tip__button {
+  border-radius: 24px;
+  padding: 17px 24px;
+  box-sizing: border-box;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height, or 125% */
+  letter-spacing: -0.25px;
+  border: 0;
+}
+.tool-tip__button:hover {
+  cursor: pointer;
+}
+.tool-tip__button_type_save {
+  color: #7e88c3;
+  background: #f9fafe;
+}
+.tool-tip__button_type_save:hover {
+  background: #dfe3fa;
+}
+.tool-tip__button_type_delete {
+  background: #ec5757;
+  color: #ffffff;
+}
+.tool-tip__button_type_delete:hover {
+  background: #ff9797;
+}
+
+@media screen and (max-width: 768px) {
+  .tool-tip__container {
+    max-width: 327px;
+  }
+}
