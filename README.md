@@ -1,4 +1,4 @@
-# Audiophile e-commerce website
+# Invoice web app
 
 Web app features invoices system, where user can add and track invoices.
 
