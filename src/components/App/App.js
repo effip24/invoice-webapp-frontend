@@ -22,7 +22,7 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setInvoices(demoData);
+    setInvoices(JSON.parse(sessionStorage.getItem("invoices")) || demoData);
   }, [isDemo]);
 
   const handleInvoiceClick = (invoice) => {
@@ -31,12 +31,15 @@ function App() {
 
   const handleInvoiceDeleteClick = (invoice) => {
     setInvoices(invoices.filter((c) => c.id !== invoice.id));
+    saveToLocal(invoices.filter((c) => c.id !== invoice.id));
   };
 
   const handleMarkAsPaidClick = (invoice) => {
     let newInvoice = invoice;
     newInvoice.status = "paid";
     setInvoices(invoices.map((c) => (c.id === invoice.id ? newInvoice : c)));
+
+    saveToLocal(invoices.map((c) => (c.id === invoice.id ? newInvoice : c)));
   };
 
   const handleInvoiceSave = (invoice, isNew, isDraft) => {
@@ -49,9 +52,11 @@ function App() {
     if (isNew) {
       newInvoice.id = invoices[invoices.length - 1].id + "2";
       setInvoices([newInvoice, ...invoices]);
+      saveToLocal([newInvoice, ...invoices]);
     } else {
       setInvoices(invoices.map((c) => (c.id === invoice.id ? newInvoice : c)));
       setSelectedInvoice(newInvoice);
+      saveToLocal(invoices.map((c) => (c.id === invoice.id ? newInvoice : c)));
     }
   };
 
@@ -61,6 +66,10 @@ function App() {
     setIsDemo(true);
     setIsLoggedIn(true);
     navigate("/");
+  };
+
+  const saveToLocal = (invoices) => {
+    sessionStorage.setItem("invoices", JSON.stringify(invoices));
   };
 
   return (

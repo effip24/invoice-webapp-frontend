@@ -94,7 +94,7 @@ const ItemsFields = ({ items, onChange, onNewItem, onItemDelete }) => {
                     name="quantity"
                     className="popup-items__table-input"
                     value={item.quantity || ""}
-                    onChange={(e) => onchange(id, e)}
+                    onChange={(e) => onChange(id, e)}
                   ></input>
                 </div>
 
@@ -104,7 +104,7 @@ const ItemsFields = ({ items, onChange, onNewItem, onItemDelete }) => {
                     name="price"
                     className="popup-items__table-input"
                     value={item.price || ""}
-                    onChange={(e) => onchange(id, e)}
+                    onChange={(e) => onChange(id, e)}
                   ></input>
                 </div>
 
